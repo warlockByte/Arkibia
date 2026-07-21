@@ -1,0 +1,25 @@
+.dashboard-lower {
+  display: none;
+}
+
+.welcome {
+  display: none;
+}
+
+.galaxy-highlight {
+  display: none;
+}
+
+.page > .welcome + .stats-grid {
+  margin-top: 32px;
+}
+
+.page > .stats-grid + .section-head {
+  margin-top: 42px;
+}
+
+@media (max-width: 600px) {
+  .page > .welcome + .stats-grid {
+    margin-top: 22px;
+  }
+}

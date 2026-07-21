@@ -1,0 +1,114 @@
+.api-modal:has(.selected-media) {
+  width: min(980px, 96vw);
+  display: grid;
+  grid-template-columns: 255px minmax(0, 1fr);
+  column-gap: 34px;
+  padding: 30px;
+}
+
+.api-modal:has(.selected-media) .modal-head {
+  grid-column: 1 / -1;
+  margin-bottom: 24px;
+}
+
+.api-modal:has(.selected-media) .selected-media {
+  grid-column: 1;
+  grid-row: 2 / span 3;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #0b090c;
+  box-shadow: 0 20px 45px #0009;
+}
+
+.api-modal:has(.selected-media) .selected-media .result-image.large {
+  width: 100%;
+  height: 340px;
+  border-radius: 0;
+}
+
+.api-modal:has(.selected-media) .selected-media > div:nth-child(2) {
+  padding: 4px 15px 16px;
+}
+
+.api-modal:has(.selected-media) .selected-media b {
+  font: 700 15px Manrope;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.api-modal:has(.selected-media) .selected-media span,
+.api-modal:has(.selected-media) .selected-media small {
+  margin-top: 6px;
+}
+
+.api-modal:has(.selected-media) .selected-media > button {
+  margin: 0 15px 15px;
+}
+
+.api-modal:has(.selected-media) .media-overview {
+  grid-column: 2;
+  margin: 0 0 20px;
+  min-height: 76px;
+  padding: 3px 0 3px 15px;
+  font-size: 12px !important;
+  line-height: 1.7;
+}
+
+.api-modal:has(.selected-media) .media-overview::before {
+  content: 'OVERVIEW';
+  display: block;
+  margin-bottom: 7px;
+  color: #aa91ff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.api-modal:has(.selected-media) .personal-fields {
+  grid-column: 2;
+  gap: 17px;
+  padding-top: 20px;
+}
+
+.api-modal:has(.selected-media) .personal-fields input:not([type=checkbox]),
+.api-modal:has(.selected-media) .personal-fields select,
+.api-modal:has(.selected-media) .personal-fields textarea {
+  background: #09080a;
+}
+
+.rating-field { position: relative; }
+.rating-field > span { position: absolute; right: 0; top: 0; color: #bda9ff; }
+.star-picker { display: grid; grid-template-columns: repeat(5, 27px); gap: 3px; min-height: 63px; align-content: center; }
+.star-picker button { width: 27px; height: 30px; padding: 0; border: 0; background: none; color: #66606a; cursor: pointer; transition: transform .15s, color .15s; }
+.star-picker button:hover { transform: scale(1.12); color: #d9b45a; }
+.star-picker button.filled { color: #efb94e; }
+.star-picker svg { width: 22px; height: 22px; }
+
+.api-modal:has(.selected-media) .modal-actions {
+  grid-column: 1 / -1;
+  margin-top: 25px;
+}
+
+@media (max-width: 720px) {
+  .api-modal:has(.selected-media) {
+    display: block;
+    width: 100%;
+    padding: 20px;
+  }
+  .api-modal:has(.selected-media) .selected-media {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 18px;
+  }
+  .api-modal:has(.selected-media) .selected-media .result-image.large { height: 145px; }
+  .api-modal:has(.selected-media) .selected-media > div:nth-child(2) { padding: 16px 10px 10px 0; }
+  .api-modal:has(.selected-media) .selected-media > button { grid-column: 2; margin: -45px 10px 10px auto; }
+  .api-modal:has(.selected-media) .media-overview { margin-bottom: 16px; }
+}
