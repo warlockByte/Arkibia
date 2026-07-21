@@ -4,6 +4,20 @@ Arkibia is a responsive personal media library for organizing movies, games, boo
 
 > **Project status:** Arkibia is still in development. The database and hosted backend are not finished yet, so collections currently persist only in the browser's local storage. Supabase integration is planned but is not currently active.
 
+## Preview
+
+### Dashboard
+
+![Arkibia dashboard](docs/images/dashboard.png)
+
+### Collection details
+
+![Arkibia collection details](docs/images/details.png)
+
+### Edit entry
+
+![Arkibia edit entry dialog](docs/images/edit-entry.png)
+
 ## Features
 
 - Movies powered by TMDb
